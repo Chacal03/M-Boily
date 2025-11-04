@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+
+<title>Alexandre Boily-Droits</title>
+
+
+<meta charset="UTF-8">
+  
+<style>
+   .text-container {
+   background-image: url('https://i.ibb.co/WNtS9fZT/U-yj8c-UYn9fe0k7m0-No-LYQAxyw1cj7-Zznh-E3h-Qu-TKh3t-Fjw-Qe-FFH9w-PEavlj-Up-Oc-AZa-s-Wp4avsqj-Bf-Ph-O.jpg');
+           display: flex;
+           align-items: center;
+           position: relative;
+           background-size: 100%;
+           height: 100%;
+           width: 100%;
+           min-height: 40vh;
+           margin-top:-20px;
+           margin-right:-20px;
+           margin-left: -15px;
+           background-position: 50% 40%;
+           background-repeat: no-repeat;
+           padding: 20px;
+           opacity: 0.5;
+       }
+      
+   </style>
+
+
+   <style>
+   /* Met un background */
+       body
+       {
+       background-color: rgba(20,30,80,0.8);
+       min-height: 1500px;
+       }
+   /* Prepare le rectangle et met ces grandeurs */ 
+   .my-rectangle1 {
+       position: relative;
+       bottom:20px;
+       right: 10px;
+       width: 105%;
+       height: 50px;
+       background-color: white;
+   }
+   /* Prepare le rectangle et met ces grandeurs */ 
+   .my-rectangle2 {
+       position: relative;
+       bottom:35px;
+       right: 10px;
+       width: 105%;
+       height: 50px;
+       background-color: white;
+   }
+   .my-rectangle3 {
+       position: relative;
+       background-color: rgba(255,255,255,0.7);
+       margin: 20px;
+       padding: 20px;
+       box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7);
+   }
+   .my-rectangle4 {
+       position: relative;
+       background-color: rgba(255,255,255,0.3);
+       margin: 10px;
+       padding: 10px;
+       height: 50px;
+       box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7);
+   }
+   </style>
+
+
+   <style>
+       .buttons {
+           position: relative;
+           bottom: 55px;
+           display: flex;
+           justify-content: space-around;
+           align-items: center;
+           height: 45px;
+       }      
+       #btnleft { 
+           position: relative;
+           width: 33%;
+           height: 45px;
+           margin-left: -10px;  
+           border: none;
+           color: white;
+           background-color: rgba(42, 97, 161);
+           font-size:14px;
+           font-weight:700;
+           cursor: pointer;
+           transition: background-color 0.3s ease;
+       }
+       #btnleft:hover {
+           background-color: rgba(30, 92, 150);
+           color: lightgray;
+       }
+       #btncenter { 
+           position: relative;
+           width: 35%;
+           height: 45px;  
+           border: none;
+           color: white; 
+           background-color: rgba(42, 97, 161);
+           font-size:14px;
+           font-weight:700;
+           cursor: pointer;
+           transition: background-color 0.3s ease;
+       }
+       #btncenter:hover {
+           background-color: rgba(30, 92, 150);
+           color: lightgray;
+       }
+       #btnright { 
+           position: relative;
+           width: 33%;
+           height: 45px;
+           margin-right: -10px;     
+           border: none;
+           color: white; 
+           background-color: rgba(42, 97, 161);
+           font-size:14px;
+           font-weight:700;
+           cursor: pointer;
+           transition: background-color 0.3s ease;
+       }
+       #btnright:hover {
+           background-color: rgba(30, 92, 150);
+           color: lightgray;
+       }
+      
+   </style>
+
+
+   <style>
+       .dropbtn {
+           position: relative;
+           float: right;
+           margin-top: -40px;
+           background-color: rgba(42, 97, 161);
+           color: white;
+           border: none;       /* supprime la bordure */
+           padding: 10px 20px;
+           cursor: pointer;
+           font-weight: bold;
+       }
+       .dropbtn:hover {
+           background-color: rgba(30, 92, 150);
+       }
+       .dropdown-content {
+           display: none; /* caché par défaut */
+           position: relative;
+           float: right;
+           background-color: rgba(42, 97, 161,0.9);
+           min-width: 160px;
+           box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+           z-index: 1;
+       }
+
+
+       .dropdown-content a {
+           color: white;
+           padding: 10px 14px;
+           text-decoration: none;
+           display: block;
+        }
+      
+       .dropdown-content a:hover {
+           background-color: rgba(30, 92, 150);
+       }
+
+
+       .show {
+           display: block;
+       }
+   </style>
+</head>
+<body>
+   <!Premier rectangle et titre>
+   <div class="my-rectangle1">
+           <h2 style="font-size: 24px;">‎ ‎ ‎  La charte Boilienne</h2>
+   </div>
+
+
+   <!Place l'image sous le texte>
+   <div class="text-container">
+           <p></p>
+   </div>
+   <!Place le rectangle>
+   <div class="my-rectangle2">
+       <p></p>
+   </div>
+
+
+   <div class="buttons">
+       <button onclick="window.location.href='Home.html'"id="btnleft">Home</button>
+       <button onclick="window.location.href='Information.html'" id="btncenter">À propos</button>
+       <button onclick="window.location.href='Inscription.html'"id="btnright">S'inscrire</button>
+   </div>
+
+
+   <div class="dropdown">
+       <div class="dropbox">
+           <button onclick="MontreDropdown()" class="dropbtn">Dropdown</button>
+       </div>
+       <div id="Dropdown-articles" class="dropdown-content">
+           <a href="#Article-1">Article-I</a>
+           <a href="#Article-2">Article-II</a>
+           <a href="#Article-3">Article-II</a>
+
+
+       </div>
+   </div>
+
+
+   <div class="my-rectangle3">
+       <div class="my-rectangle4">
+           <p style="font-size: 18px">La charte de droit de la société Boilienne: </p>
+       </div>
+           <p id="Article-1"><Strong>Article I </Strong>— Droit au Respect du Processeur</p>
+           <p>Nul ne doit surcharger son ordinateur sans raison valable.
+           Toute ouverture simultanée de Polytrack, YouTube, et Google Docs sera considérée comme un crime contre le CPU.
+           Cependant, M. Boily, dans sa sagesse infinie, a le droit divin d’avoir 57 onglets ouverts “pour une bonne raison”.</p><br>
+
+
+           <p id="Article-2"><Strong>Article II </Strong>— Droit au erreurs de syntaxes</p>
+           <p>Les erreurs ne sont pas la fin.
+           C’est un message divin envoyé par le <strong>Grand Boily</strong> pour tester ta foi en ton prof.
+           Toute correction réussie doit être célébrée avec énormement de joie.</p><br>
+
+
+           <p id="Article-3"><Strong>Article III </Strong>— Droit de Vénération</p>
+           <p>Chaque membre se doit d’honorer la légende vivante Alexandre Boily au moins une fois par jour, soit par :
+           <ul>
+               <li>un compliment sur son talent multitâche,
+               <li>un “monsieur, vous êtes un génie” sincère,
+               <li>ou une offrande symbolique de clé USB formatée.
+           </ul>
+   </div>
+   <script>
+       function MontreDropdown() {
+       document.getElementById("Dropdown-articles").classList.toggle("show");
+       }
+   </script>
+
+
+</body>
+
+
+</html>

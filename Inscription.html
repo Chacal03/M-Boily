@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+
+<title>Alexandre Boily-Inscription</title>
+
+
+<meta charset="UTF-8">  
+
+
+   <style>
+   /* Met un background */
+       body
+       {
+       background-color: rgba(20,30,80,0.8);
+       min-height: 1500px;
+       }
+   /* Prepare le rectangle et met ces grandeurs */ 
+   .my-rectangle1 {
+       position: relative;
+       bottom:20px;
+       right: 10px;
+       width: 105%;
+       height: 75px;
+       background-color: white;
+   }
+   .my-rectangle2 {
+       position: relative;
+       background-color: rgba(255,255,255,0.7);
+       margin: 20px;
+       padding: 20px;
+       box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7);
+   }
+  
+   </style>
+
+
+   <style>
+       .buttons {
+           position: relative;
+           bottom: 40px;
+           display: flex;
+           justify-content: space-around;
+           align-items: center;
+           height: 45px;
+       }      
+       #btnleft { 
+           position: relative;
+           width: 33%;
+           height: 45px;
+           margin-left: -10px;  
+           border: none;
+           color: white;
+           background-color: rgba(42, 97, 161);
+           font-size:14px;
+           font-weight:700;
+           cursor: pointer;
+           transition: background-color 0.3s ease;
+       }
+       #btnleft:hover {
+           background-color: rgba(30, 92, 150);
+           color: lightgray;
+       }
+       #btncenter { 
+           position: relative;
+           width: 35%;
+           height: 45px;  
+           border: none;
+           color: white; 
+           background-color: rgba(42, 97, 161);
+           font-size:14px;
+           font-weight:700;
+           cursor: pointer;
+           transition: background-color 0.3s ease;
+       }
+       #btncenter:hover {
+           background-color: rgba(30, 92, 150);
+           color: lightgray;
+       }
+       #btnright { 
+           position: relative;
+           width: 33%;
+           height: 45px;
+           margin-right: -10px;     
+           border: none;
+           color: white; 
+           background-color: rgba(42, 97, 161);
+           font-size:14px;
+           font-weight:700;
+           cursor: pointer;
+           transition: background-color 0.3s ease;
+       }
+       #btnright:hover {
+           background-color: rgba(30, 92, 150);
+           color: lightgray;
+       }
+      
+   </style>
+
+
+</head>
+<body>
+   <!Premier rectangle et titre>
+   <div class="my-rectangle1">
+           <h2 style="font-size: 24px;">‎ ‎ ‎  Inscription</h2>
+   </div>
+
+
+   <div class="buttons">
+       <button onclick="window.location.href='Home.html'" id="btnleft">Home</button>
+       <button onclick="window.location.href='Information.html'" id="btncenter">À propos</button>
+       <button onclick="window.location.href='Droits.html'" id="btnright">Vos droits</button>
+   </div>
+   <div class="my-rectangle2">
+       <p style="font-size: 18px"> Bienvenue a l'inscription a la communauté Boilienne!</p>
+       <form onsubmit="return validate()">
+           <label for="Prenom">Prénom:</label><br>
+           <input type="text" id="Prenom" name="Nom"><br>
+           <label for="Nom">Nom:</label><br>
+           <input type="text" id="Nom" name="Nom"><br>
+           <label for="Cell">N°cellulaire:</label><br>
+           <input type="text" id="Cell" name="Cell"><br>
+           <label for="Addresse">Adresse:</label><br>
+           <input type="text" id="Addresse" name="Addresse"><br><br>
+
+
+           <label for="Boite"> J'accepte les <a href= "Conditions.html">conditions générales et la politique de confidentialité:</a></label>
+           <input type="checkbox" id="Boite" value="value1"><br>
+          
+           <input type="submit"  value="Soumettre">
+
+
+           <div id="display" style="display:none;">
+               <p>Prénom: <span id="DisplayPrenom"></span></p>
+               <p>Nom: <span id="DisplayNom"></span></p>
+               <p>N°cellulaire: <span id="DisplayCell"></span></p>
+               <p>Adresse: <span id ="DisplayAddresse"></span></p>
+           </div>
+       </form>
+
+
+       <script>   
+           function validate() {
+               const prenom = document.getElementById('Prenom').value;
+               const nom = document.getElementById('Nom').value;
+               const cell = document.getElementById('Cell').value;
+               const addresse = document.getElementById('Addresse').value;
+               const checkbox = document.getElementById('Boite')
+               //Fait certain que les case ne sont pas vide
+               if(prenom === "" || nom === "" || cell === "" || addresse === "") {
+                   alert("Remplissez tous les champs !");
+                   return false;
+               }
+               if(!checkbox.checked) {
+                   alert('Cochez la boite !');
+                   return false;
+               }
+               //Équation demander
+               console.log(2025 + 2000);
+
+
+               document.getElementById('DisplayPrenom').innerText = prenom;
+               document.getElementById('DisplayNom').innerText = nom;
+               document.getElementById('DisplayCell').innerText = cell;
+               document.getElementById('DisplayAddresse').innerText = addresse;
+
+
+               //Enleve le display:none de display
+               document.getElementById('display').style.display = "block";
+               document.getElementById('btncomf').style.display = "block";
+               return false;
+           }
+       </script>      
+   </div>
+
+
+   <style>
+   .confirmation {
+       position: relative;
+       margin-left: 15px;
+       border: none;
+       background-color: rgba(42, 97, 161);
+       color: white;
+       padding: 10px 20px;
+       font-weight: 700;
+       box-shadow: 0 0 2px 2px rgba(42, 97, 161);
+       cursor: pointer;
+       transition: background-color 0.3s ease;
+   }
+   .confirmation:hover {
+       background-color: rgba(30, 92, 150);
+   }
+   </style>
+   <button id="btncomf" style="display:none;"onclick="window.location.href='Submitted.html'"  class="confirmation"><Strong>Comfirmer</Strong></button>
+  
+</body>
+
+
+</html>

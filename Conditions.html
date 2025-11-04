@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+
+<title>Alexandre Boily-Soumis</title>
+
+
+<meta charset="UTF-8">
+  
+<style>
+   .text-container {
+           background-image: url('https://i.ibb.co/Kc30xcJL/Screenshot-2025-11-02-22-24-47.png');
+           display: flex;
+           align-items: flex-center;
+           position: relative;
+           background-size: 100%;
+           height: 100%;
+           width: 100%;
+           min-height: 70vh;
+           margin-top:-20px;
+           margin-right:-20px;
+           margin-left: -15px;
+           background-position: 50% 50%;
+           background-repeat: no-repeat;
+           padding: 20px;
+           opacity: 0.5;
+       }
+      
+   </style>
+
+
+   <style>
+   /* Met un background */
+       body
+       {
+       background-color: rgba(20,30,80,0.8);
+       min-height: 1500px;
+       }
+   /* Prepare le rectangle et met ces grandeurs */ 
+   .my-rectangle1 {
+       position: relative;
+       bottom:20px;
+       right: 10px;
+       width: 105%;
+       height: 50px;
+       background-color: white;
+   }
+   /* Prepare le rectangle et met ces grandeurs */ 
+   .my-rectangle2 {
+       position: relative;
+       bottom:35px;
+       right: 10px;
+       width: 105%;
+       height: 50px;
+       background-color: white;
+   }
+   .my-rectangle3 {
+       position: relative;
+       background-color: rgba(255,255,255,0.7);
+       margin: 20px;
+       padding: 20px;
+       box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7);
+   }
+   </style>
+
+
+   <style>
+      
+       #btnleft { 
+           position: relative;
+           float: left;
+           bottom: 55px;
+           width: 33%;
+           height: 45px;
+           margin-left: -10px;  
+           border: none;
+           color: white;
+           background-color: rgba(42, 97, 161);
+           font-size:14px;
+           font-weight:700;
+           cursor: pointer;
+           transition: background-color 0.3s ease;
+       }
+       #btnleft:hover {
+           background-color: rgba(30, 92, 150);
+           color: lightgray;
+       }
+       .list-container {
+           position: relative;
+           left: 30px;
+           text-align: left;
+       }
+   </style>
+
+
+   <style>
+       .dropbtn {
+           position: relative;
+           float: right;
+           margin-top: -50px;
+           background-color: rgba(42, 97, 161);
+           color: white;
+           border: none;       /* supprime la bordure */
+           padding: 10px 20px;
+           cursor: pointer;
+           font-weight: bold;
+       }
+       .dropbtn:hover {
+           background-color: rgba(30, 92, 150);
+       }
+       .dropdown-content {
+           display: none; /* caché par défaut */
+           position: relative;
+           float: right;
+           background-color: rgba(42, 97, 161,0.9);
+           min-width: 160px;
+           box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+           z-index: 1;
+       }
+
+
+       .dropdown-content a {
+           color: white;
+           padding: 10px 14px;
+           text-decoration: none;
+           display: block;
+        }
+      
+       .dropdown-content a:hover {
+           background-color: rgba(30, 92, 150);
+       }
+
+
+       .show {
+           display: block;
+       }
+   </style>
+</head>
+<body>
+   <!--Premier rectangle et titre-->
+   <div class="my-rectangle1">
+           <h2 style="font-size: 24px;">‎ ‎ ‎  Conditions de candidature</h2>
+   </div>
+
+
+   <!--Place l'image sous le texte-->
+   <div class="text-container">
+           <p></p>
+   </div>
+   <!--Place le rectangle-->
+   <div class="my-rectangle2">
+       <p></p>
+   </div>
+
+
+   <div class="buttons">
+       <button onclick="window.location.href='Inscription.html'"id="btnleft">Back</button>
+   </div>
+
+
+   <div class="dropdown">
+       <div class="dropbox">
+           <button onclick="MontreDropdown()" class="dropbtn">Dropdown</button>
+       </div>
+       <div id="Dropdown-articles" class="dropdown-content">
+           <a href="#Article-1">Article-I</a>
+           <a href="#Article-2">Article-II</a>
+           <a href="#Article-3">Article-III</a>
+       </div>
+   </div>
+
+
+   <script>
+       function MontreDropdown() {
+       document.getElementById("Dropdown-articles").classList.toggle("show");
+       }
+   </script>
+
+
+   <div class="my-rectangle3">
+       <h2><strong>Politiques de confidentialité de la société Boilienne</strong></h2>
+       <p>La société Boilienne s'engage a protéger vos données, vos projets, et vos choix questionnables. Nous croyons fermement que la vie privée est néccésaire, sauf quand il s'agis de photos de not Maître.</p>
+
+
+       <p id="Article-1"><strong>Article-I:</strong> Collecte des informations:</p>
+       <div class="list-container">
+           <ul>
+               <li>votre prénom, vos bienfaits musicales et informatiques,</li>
+               <li>combien de fois tu demandes des question au prof,</li>
+               <li>la vitesse à laquelle vous fermez YouTube quand le prof s’approche.</li>
+           </ul>
+       </div>
+
+
+       <p id="Article-2"><strong>Article-II:</strong> Sécurité de l'information:</p>
+       <div class="list-container">
+           <ul>
+               <li>Ctrl-S,</li>
+               <li>Clé usb.</li>
+           </ul>
+       </div>
+
+
+       <p id="Article-3"><strong>Article-III:</strong> Respect et autorité:</p>
+       <div class="list-container">
+           <ul>
+               <li>Tout les membres doivent ce respecter avant 9h du matin,</li>
+               <li>en cas de soucis avec les règles, M.Boily as le droit de modifier les reglements comme il le souhaite.</li>
+           </ul>
+       </div>
+   </div>
+
+
+</body>
+
+
+</html>
